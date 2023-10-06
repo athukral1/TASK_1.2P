@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Concepts</title>
+</head>
+
+<body>
+    <h1>JavaScript Concepts</h1>
+
+    <!-- String Methods -->
+    <h2>String Methods</h2>
+    <p id="stringMethodsOutput"></p>
+
+    <!-- Number Methods -->
+    <h2>Number Methods</h2>
+    <p id="numberMethodsOutput"></p>
+
+    <!-- Array Methods -->
+    <h2>Array Methods</h2>
+    <p id="arrayMethodsOutput"></p>
+
+    <!-- Date Methods -->
+    <h2>Date Methods</h2>
+    <p id="dateMethodsOutput"></p>
+
+    <!-- Function Methods -->
+    <h2>Function Methods</h2>
+    <p id="functionMethodsOutput"></p>
+
+    <script>
+        // String Methods
+        const str = 'JavaScript is awesome!';
+        const stringMethodsOutput = document.getElementById('stringMethodsOutput');
+        stringMethodsOutput.innerHTML = `
+            Length: ${str.length}<br>
+            Uppercase: ${str.toUpperCase()}<br>
+            Lowercase: ${str.toLowerCase()}<br>
+            Substring: ${str.substring(0, 10)}<br>
+            Replace: ${str.replace('awesome', 'fantastic')}<br>
+        `;
+
+        // Number Methods
+        const num = 42.6789;
+        const numberMethodsOutput = document.getElementById('numberMethodsOutput');
+        numberMethodsOutput.innerHTML = `
+            To Fixed (2 decimals): ${num.toFixed(2)}<br>
+            Integer Part: ${Math.floor(num)}<br>
+            Square Root: ${Math.sqrt(num)}<br>
+            Random Number: ${Math.random()}<br>
+            Absolute Value: ${Math.abs(-num)}<br>
+        `;
+
+        // Array Methods
+        const arr = [1, 2, 3, 'four', 'five', 6];
+        const arrayMethodsOutput = document.getElementById('arrayMethodsOutput');
+        arrayMethodsOutput.innerHTML = `
+            Length: ${arr.length}<br>
+            Join: ${arr.join(', ')}<br>
+            Push: ${arr.push(7)}<br>
+            Pop: ${arr.pop()}<br>
+            Index Of 'four': ${arr.indexOf('four')}<br>
+        `;
+
+        // Date Methods
+        const now = new Date();
+        const dateMethodsOutput = document.getElementById('dateMethodsOutput');
+        dateMethodsOutput.innerHTML = `
+            Current Date: ${now.toDateString()}<br>
+            Current Time: ${now.toTimeString()}<br>
+            UTC Date: ${now.toUTCString()}<br>
+            Year: ${now.getFullYear()}<br>
+            Month: ${now.getMonth() + 1}<br>
+        `;
+
+        // Function Methods
+        function greetUser(name) {
+            return `Hello, ${name}!`;
+        }
+
+        const functionMethodsOutput = document.getElementById('functionMethodsOutput');
+        functionMethodsOutput.innerHTML = "<p>User: " + greetUser("Ayushi") + "</p>";
+
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        const addOutput = document.getElementById('functionMethodsOutput');
+        const resultAddition = addNumbers(10, 15);
+        functionMethodsOutput.innerHTML += `<p>Result: ${resultAddition}</p>`;
+    </script>
+</body>
+
+</html>
